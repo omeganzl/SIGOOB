@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+</head>
+<body>
+<p>Welcome {{ user.screen_name }}!</p>
+<form action="{{ url_for('search') }}">
+    <label for="search">What do you want to find?</label>
+    <input type="text" name="search" id="search" placeholder="Enter a search term">
+    <label for="filter">Filter?</label>
+    <select name="filter" id="filter">
+        <option value="None" selected>Safe</option>
+        <option value="safe">Safe</option>
+        <option value="media">Media</option>
+        <option value="native_video">Video</option>
+        <option value="periscope">Periscope</option>
+        <option value="vine">Vine</option>
+        <option value="images">Images</option>
+        <option value="twimg">Twitter Image</option>
+        <option value="links">Links</option>
+    </select>
+    <p class="lead">
+        <button class="btn btn-lg btn-secondary" id="submit" type="submit">Search!</button>
+    </p>
+</form>
+</body>
+</html>

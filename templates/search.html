@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+    <title>Search Results</title>
+</head>
+<body>
+    <div class="container">
+        <ul class="list-group" id="tweets">
+            {% for element in content %}
+            <li class="list-group-item">{{ element }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
